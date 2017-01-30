@@ -10,13 +10,13 @@ data = [[event1,phenomenon_a],[event1,phenomenon_b],[event2,phenomenon_c],[event
 dic = {}
 
 for d in data:
-  d[0] = event
-  d[1] = phen
+  event = d[0]
+  phen = d[1]
   dic[event] = dic.get(event,{}) #Creates dic = {a : {}, b : {}, ... } for each event
   
   #Initializes each inner dictionary to 0 and adds 1 (counts) each time a given event appears in the data
   # dic = {event : {a: 0, b: 0,...},...
-  #Upon seeing gene1 associated with event:
+  #Upon seeing event associated with event:
   # dic = {event : {a : 1, b : 0,...},...}
   
   dic[event][phen] = dic[event].get(phen,0) + 1
