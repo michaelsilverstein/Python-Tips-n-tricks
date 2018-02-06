@@ -15,9 +15,9 @@ if we import `scriptA` into `scriptB` to use a function from `scriptA`, during t
  Hmm... not sure if that was very clear. Hopefully the tutorial will make things clearer. 
  
  **Start off by running the following scripts:**
-1. [script1](): Read the contents of this script and then run it. `script1` contains some functions that we use in one way
+1. [script1](https://github.com/michaelsilverstein/Python-Tips-n-tricks/blob/master/ifNameIsMain/script1.py): Read the contents of this script and then run it. `script1` contains some functions that we use in one way
 in `script1`, but may be useful to call from another script. The contents of the `if __name__ == '__main__'` will only 
 run when `script1` is called directly.
 
-2. [script2](): Read the contents and then run it. `script2` will call some functions from `script1` without running any
+2. [script2](https://github.com/michaelsilverstein/Python-Tips-n-tricks/blob/master/ifNameIsMain/script2.py): Read the contents and then run it. `script2` will call some functions from `script1` without running any
 of the contents within the `if __name__ == '__main__'` clause.
