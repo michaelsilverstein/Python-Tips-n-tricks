@@ -12,6 +12,7 @@ def normalize_array(v):
 def hex2rgb(h):
     # Convert hex to RGB
     # https://stackoverflow.com/questions/29643352/converting-hex-to-rgb-value-in-python
+    h = h.strip('#')
     return np.array([int(h[i:i+2],16) for i in [0,2,4]])
 
 def colorgrad(color1, color2, n):
@@ -45,9 +46,7 @@ def colorgrad(color1, color2, n):
             color1 = np.array(c_dict_rgb[color1])
         # If hex
         elif color1[0] == '#':
-            color1 = color1.upper()
-            if color1 in chex:
-                color1 = hex2rgb(color1)
+            color1 = hex2rgb(color1)
         else:
             print('"%s" is not an accepted color' % color1)
             return
@@ -55,9 +54,7 @@ def colorgrad(color1, color2, n):
         if color2 in cnames:
             color2 = np.array(c_dict_rgb[color2])
         elif color2[0] == '#':
-            color2 = color2.upper()
-            if color2 in chex:
-                color2 = hex2rgb(color2)
+            color2 = hex2rgb(color2)
         else:
             print('"%s" is not an accepted color' % color2)
             return
