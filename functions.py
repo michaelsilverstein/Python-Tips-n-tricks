@@ -13,7 +13,7 @@ def hex2rgb(h):
     # Convert hex to RGB
     # https://stackoverflow.com/questions/29643352/converting-hex-to-rgb-value-in-python
     h = h.strip('#')
-    return np.array([int(h[i:i+2],16) for i in [0,2,4]])
+    return np.array([int(h[i:i+2],16) for i in [0,2,4]])/255
 
 def colorgrad(color1, color2, n):
     """
